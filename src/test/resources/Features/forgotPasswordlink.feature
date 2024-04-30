@@ -1,7 +1,7 @@
-
+@Test
 Feature: Verify forgot password link navigates to forgot password page
 
-Background:
+  Background: 
     Given I am on the Magento website login page
 
   Scenario: Resetting password with valid email

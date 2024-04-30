@@ -1,0 +1,202 @@
+<html>
+<head>
+<title>TestNG:  Feature</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Feature</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>3/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Apr 30 17:42:43 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>105 seconds (105643 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Reorder a previous order", "Reorder functionality"</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input type=&quot;radio&quot; class=&quot;radio&quot; data-bind=&quot;attr: {&apos;aria-labelledby&apos;: &apos;label_method_&apos; + method.method_code + &apos;_&apos; + method.carrier_code + &apos; &apos; + &apos;label_carrier_&apos; + method.method_code + &apos;_&apos; + method.carrier_code,
+                    &apos;checked&apos;: element.rates().length == 1 || element.isSelected}, value: method.carrier_code + &apos;_&apos; + method.method_code, checked: element.isSelected&quot; aria-labelledby=&quot;label_method_flatrate_flatrate label_carrier_flatrate_flatrate&quot; value=&quot;flatrate_flatrate&quot; name=&quot;ko_unique_1&quot;&gt; is not clickable at point (26, 526). Other element would receive the click: &lt;div id=&quot;checkout-loader&quot; data-role=&quot;checkout-loader&quot; class=&quot;loading-mask&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=124.0.6367.63)
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [01a6796217ed4f2614c735f2687a7cf4, clickElement {id=f.68F758861BA84A863CF73DB306545F4A.d.55738A33B990BC03D2F8A3FD3C59A7BA.e.205}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\priti\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51591}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51591/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (01a6796217ed4f2614c735f2687a7cf4)] -&gt; xpath: //input[@name=&apos;ko_unique_1&apos;]]
+Session ID: 01a6796217ed4f2614c735f2687a7cf4
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at StepDefinitions.ReorderStepDef.i_should_be_redirected_to_the_cart_page_to_complete_the_order(ReorderStepDef.java:54)
+	at ✽.I should be redirected to the cart page to complete the order(file:///C:/Users/priti/eclipse-workspace/FirstProject/src/test/resources/Features/Reorder.feature:9)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1443335402", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1443335402'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input type=&quot;radio&quot; class=&quot;radio&quot; data-bind=&quot;attr: {&apos;aria-labelledby&apos;: &apos;label_method_&apos; + method.method_code + &apos;_&apos; + method.carrier_code + &apos; &apos; + &apos;label_carrier_&apos; + method.method_code + &apos;_&apos; + method.carrier_code,
+                    &apos;checked&apos;: element.rates().length == 1 || element.isSelected}, value: method.carrier_code + &apos;_&apos; + method.method_code, checked: element.isSelected&quot; aria-labelledby=&quot;label_method_flatrate_flatrate label_carrier_flatrate_flatrate&quot; value=&quot;flatrate_flatrate&quot; name=&quot;ko_unique_1&quot;&gt; is not clickable at point (26, 526). Other element would receive the click: &lt;div id=&quot;checkout-loader&quot; data-role=&quot;checkout-loader&quot; class=&quot;loading-mask&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=124.0.6367.63)
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [01a6796217ed4f2614c735f2687a7cf4, clickElement {id=f.68F758861BA84A863CF73DB306545F4A.d.55738A33B990BC03D2F8A3FD3C59A7BA.e.205}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\priti\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51591}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51591/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (01a6796217ed4f2614c735f2687a7cf4)] -&gt; xpath: //input[@name=&apos;ko_unique_1&apos;]]
+Session ID: 01a6796217ed4f2614c735f2687a7cf4
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at StepDefinitions.ReorderStepDef.i_should_be_redirected_to_the_cart_page_to_complete_the_order(ReorderStepDef.java:54)
+	at ✽.I should be redirected to the cart page to complete the order(file:///C:/Users/priti/eclipse-workspace/FirstProject/src/test/resources/Features/Reorder.feature:9)
+</pre></div></td>
+<td>44</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Adding an item to the wishlist", "Add to Wishlist as a logged In User"</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;submit&quot; title=&quot;Search&quot; class=&quot;action search&quot; aria-label=&quot;Search&quot;&gt;...&lt;/button&gt; is not clickable at point (1190, 131). Other element would receive the click: &lt;div class=&quot;header content&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=124.0.6367.63)
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f41b1a9ee78dc7a1be6e7803031c5617, clickElement {id=f.A0E599DCD1E0F7507A7ED38DD7373E6E.d.23917791332F749CBA228694989B2A3D.e.42}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\priti\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51736}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51736/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f41b1a9ee78dc7a1be6e7803031c5617)] -&gt; css selector: button[title=&apos;Search&apos;]]
+Session ID: f41b1a9ee78dc7a1be6e7803031c5617
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at StepDefinitions.CustomerAddtoWishlistStepDef.navigate_to_the_product_page(CustomerAddtoWishlistStepDef.java:35)
+	at ✽.Navigate to the product page(file:///C:/Users/priti/eclipse-workspace/FirstProject/src/test/resources/Features/customerAddtoWishlist.feature:6)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1372150180", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1372150180'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;submit&quot; title=&quot;Search&quot; class=&quot;action search&quot; aria-label=&quot;Search&quot;&gt;...&lt;/button&gt; is not clickable at point (1190, 131). Other element would receive the click: &lt;div class=&quot;header content&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=124.0.6367.63)
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f41b1a9ee78dc7a1be6e7803031c5617, clickElement {id=f.A0E599DCD1E0F7507A7ED38DD7373E6E.d.23917791332F749CBA228694989B2A3D.e.42}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\priti\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51736}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51736/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f41b1a9ee78dc7a1be6e7803031c5617)] -&gt; css selector: button[title=&apos;Search&apos;]]
+Session ID: f41b1a9ee78dc7a1be6e7803031c5617
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at StepDefinitions.CustomerAddtoWishlistStepDef.navigate_to_the_product_page(CustomerAddtoWishlistStepDef.java:35)
+	at ✽.Navigate to the product page(file:///C:/Users/priti/eclipse-workspace/FirstProject/src/test/resources/Features/customerAddtoWishlist.feature:6)
+</pre></div></td>
+<td>11</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Perform an advanced search with specific criteria", "Advanced Search"</td>
+<td></td>
+<td>14</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View products in the wishlist", "Retrieve products from wishlist page"</td>
+<td></td>
+<td>26</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify if the shopping cart is empty", "Blank Shopping Cart Check"</td>
+<td></td>
+<td>7</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+</table><p>
+</body>
+</html>

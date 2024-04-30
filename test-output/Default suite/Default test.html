@@ -1,0 +1,425 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>20/5/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Apr 30 18:08:08 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>336 seconds (336625 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Place an order with existing user", "Place an order as a logged-in user"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#product\-addtocart\-button&quot;}
+  (Session info: chrome=124.0.6367.63)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d41ce271cc75d85beec4c731f5fa5da, findElement {using=id, value=product-addtocart-button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\priti\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54282}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54282/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d41ce271cc75d85beec4c731f5fa5da
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at StepDefinitions.loginPlaceOrderStepDef.i_add_items_to_the_cart(loginPlaceOrderStepDef.java:47)
+	at ✽.I add items to the cart(file:///C:/Users/priti/eclipse-workspace/FirstProject/src/test/resources/Features/loginPlaceOrder.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2061865206", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2061865206'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#product\-addtocart\-button&quot;}
+  (Session info: chrome=124.0.6367.63)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d41ce271cc75d85beec4c731f5fa5da, findElement {using=id, value=product-addtocart-button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\priti\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54282}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54282/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d41ce271cc75d85beec4c731f5fa5da
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at StepDefinitions.loginPlaceOrderStepDef.i_add_items_to_the_cart(loginPlaceOrderStepDef.java:47)
+	at ✽.I add items to the cart(file:///C:/Users/priti/eclipse-workspace/FirstProject/src/test/resources/Features/loginPlaceOrder.feature:6)
+</pre></div></td>
+<td>13</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Adding an item to the wishlist as a guest user", "Add to Wishlist as a Guest User"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: .message-error &gt; div (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at StepDefinitions.guestAddtoWishlistStepDef.i_should_be_prompted_to_sign_up_or_log_in(guestAddtoWishlistStepDef.java:54)
+	at ✽.I should be prompted to sign up or log in(file:///C:/Users/priti/eclipse-workspace/FirstProject/src/test/resources/Features/guestAddtoWishlist.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2035215096", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2035215096'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: .message-error &gt; div (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at StepDefinitions.guestAddtoWishlistStepDef.i_should_be_prompted_to_sign_up_or_log_in(guestAddtoWishlistStepDef.java:54)
+	at ✽.I should be prompted to sign up or log in(file:///C:/Users/priti/eclipse-workspace/FirstProject/src/test/resources/Features/guestAddtoWishlist.feature:7)
+</pre></div></td>
+<td>14</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a product to the cart", "Add product to cart"</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;submit&quot; title=&quot;Add to Cart&quot; class=&quot;action primary tocart&quot; id=&quot;product-addtocart-button&quot; disabled=&quot;&quot;&gt;...&lt;/button&gt; is not clickable at point (532, 574). Other element would receive the click: &lt;div class=&quot;actions&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome-headless-shell=124.0.6367.63)
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c6b7b987d1d7b6fbbc797334351c33df, clickElement {id=f.D6C9932A49E28DB23FE596E93C2F99F8.d.4589115BAD07029B05562255C1D77240.e.9}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\priti\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54000}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54000/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome-headless-shell on windows (c6b7b987d1d7b6fbbc797334351c33df)] -&gt; id: product-addtocart-button]
+Session ID: c6b7b987d1d7b6fbbc797334351c33df
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at StepDefinitions.guestAddtocartStepDef.i_click_on_the_add_to_cart_button(guestAddtocartStepDef.java:28)
+	at ✽.I click on the add to cart button(file:///C:/Users/priti/eclipse-workspace/FirstProject/src/test/resources/Features/guestAddtocart.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1052546395", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1052546395'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;submit&quot; title=&quot;Add to Cart&quot; class=&quot;action primary tocart&quot; id=&quot;product-addtocart-button&quot; disabled=&quot;&quot;&gt;...&lt;/button&gt; is not clickable at point (532, 574). Other element would receive the click: &lt;div class=&quot;actions&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome-headless-shell=124.0.6367.63)
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c6b7b987d1d7b6fbbc797334351c33df, clickElement {id=f.D6C9932A49E28DB23FE596E93C2F99F8.d.4589115BAD07029B05562255C1D77240.e.9}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\priti\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54000}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54000/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome-headless-shell on windows (c6b7b987d1d7b6fbbc797334351c33df)] -&gt; id: product-addtocart-button]
+Session ID: c6b7b987d1d7b6fbbc797334351c33df
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at StepDefinitions.guestAddtocartStepDef.i_click_on_the_add_to_cart_button(guestAddtocartStepDef.java:28)
+	at ✽.I click on the add to cart button(file:///C:/Users/priti/eclipse-workspace/FirstProject/src/test/resources/Features/guestAddtocart.feature:6)
+</pre></div></td>
+<td>5</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete Product from the minicart", "Guest user- Delete product from the minicart"</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome-headless-shell=124.0.6367.63)
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d5f130a56f41ccbcd42f6dee2809b2d8, clickElement {id=f.B6EA36E9C7CABE85EE97AC9626975C84.d.B62D97CCC0D8B21598293012B7A6CB3A.e.31}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\priti\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54029}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54029/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome-headless-shell on windows (d5f130a56f41ccbcd42f6dee2809b2d8)] -&gt; xpath: //a[@title=&apos;Remove item&apos;]]
+Session ID: d5f130a56f41ccbcd42f6dee2809b2d8
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at StepDefinitions.guestDeleteProductFromCartStepDef.i_click_on_the_delete_icon(guestDeleteProductFromCartStepDef.java:32)
+	at ✽.I click on the delete icon(file:///C:/Users/priti/eclipse-workspace/FirstProject/src/test/resources/Features/guestDeleteProductFromCart.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace698062929", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace698062929'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome-headless-shell=124.0.6367.63)
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d5f130a56f41ccbcd42f6dee2809b2d8, clickElement {id=f.B6EA36E9C7CABE85EE97AC9626975C84.d.B62D97CCC0D8B21598293012B7A6CB3A.e.31}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\priti\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54029}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54029/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome-headless-shell on windows (d5f130a56f41ccbcd42f6dee2809b2d8)] -&gt; xpath: //a[@title=&apos;Remove item&apos;]]
+Session ID: d5f130a56f41ccbcd42f6dee2809b2d8
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at StepDefinitions.guestDeleteProductFromCartStepDef.i_click_on_the_delete_icon(guestDeleteProductFromCartStepDef.java:32)
+	at ✽.I click on the delete icon(file:///C:/Users/priti/eclipse-workspace/FirstProject/src/test/resources/Features/guestDeleteProductFromCart.feature:6)
+</pre></div></td>
+<td>11</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Edit quantity of random product in the cart", "Edit quantity of random product in the cart"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;View and Edit Cart&quot;}
+  (Session info: chrome=124.0.6367.63)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d293f91ce83ad6ce3825dc31affb0d63, findElement {using=link text, value=View and Edit Cart}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\priti\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53775}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53775/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d293f91ce83ad6ce3825dc31affb0d63
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at StepDefinitions.editQtyofProductfromCartStepDef.i_am_on_the_cart_page(editQtyofProductfromCartStepDef.java:34)
+	at ✽.I am on the cart page(file:///C:/Users/priti/eclipse-workspace/FirstProject/src/test/resources/Features/editQtyofProductfromCart.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace579590740", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace579590740'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;View and Edit Cart&quot;}
+  (Session info: chrome=124.0.6367.63)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d293f91ce83ad6ce3825dc31affb0d63, findElement {using=link text, value=View and Edit Cart}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\priti\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53775}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53775/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d293f91ce83ad6ce3825dc31affb0d63
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at StepDefinitions.editQtyofProductfromCartStepDef.i_am_on_the_cart_page(editQtyofProductfromCartStepDef.java:34)
+	at ✽.I am on the cart page(file:///C:/Users/priti/eclipse-workspace/FirstProject/src/test/resources/Features/editQtyofProductfromCart.feature:6)
+</pre></div></td>
+<td>16</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invalid login with incorrect credentials", "Login Functionality Test"</td>
+<td></td>
+<td>10</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add multiple random products to the cart", "Add multiple random products to the cart"</td>
+<td></td>
+<td>13</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Perform an advanced search with specific criteria", "Advanced Search"</td>
+<td></td>
+<td>12</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Retrieve Product Information", "Get Product Information from Magento Product Page"</td>
+<td></td>
+<td>6</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Retrieve the Global message", "Retrieve the Global message"</td>
+<td></td>
+<td>5</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View products in the wishlist", "Retrieve products from wishlist page"</td>
+<td></td>
+<td>13</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify logo navigation to home page", "Navigation of Logo Verification"</td>
+<td></td>
+<td>9</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Privacy Policy navigate to correct page", "Navigation of Privacy Policy"</td>
+<td></td>
+<td>8</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Searching for pants", "Search for Pants on Magento Website"</td>
+<td></td>
+<td>14</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Reorder a previous order", "Reorder functionality"</td>
+<td></td>
+<td>56</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify if the shopping cart is empty", "Blank Shopping Cart Check"</td>
+<td></td>
+<td>8</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit a review for "Olivia 1/4 Zip Light Jacket"", "Submit Review for Product"</td>
+<td></td>
+<td>9</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Edit customer address", "Edit customer address"</td>
+<td></td>
+<td>20</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Filter products by price range", "Verify the filter functionality"</td>
+<td></td>
+<td>11</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Resetting password with invalid email", "Verify forgot password link navigates to forgot password page"</td>
+<td></td>
+<td>7</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Adding an item to the wishlist", "Add to Wishlist as a logged In User"</td>
+<td></td>
+<td>20</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valid login with correct credentials", "Login Functionality Test"</td>
+<td></td>
+<td>10</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Create New Customer Account", "Registration Functionality Test"</td>
+<td></td>
+<td>10</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Resetting password with valid email", "Verify forgot password link navigates to forgot password page"</td>
+<td></td>
+<td>11</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+<tr>
+<td title='MyRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: MyRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the logout funcionality", "Logout"</td>
+<td></td>
+<td>14</td>
+<td>MyRunner.TestRunner@327514f</td></tr>
+</table><p>
+</body>
+</html>

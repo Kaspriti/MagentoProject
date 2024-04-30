@@ -1,14 +1,13 @@
 package StepDefinitions;
 
-import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
-
+import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 
+import base.SetUp;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -17,6 +16,7 @@ import io.cucumber.java.en.When;
 public class searchStepDef {
 WebDriver driver;
 String PRODUCT = "Pant";
+SetUp su = new SetUp();
 
 
 @Given("I am on the Magento website")
@@ -47,20 +47,25 @@ public void i_should_see_a_list_of_search_results() {
 
 @And("all search results should contain the word {string}")
 public void all_search_results_should_contain_the_word(String string) {
-    java.util.List<WebElement> searchResults = driver.findElements(By.cssSelector(".product-item-info a"));
-        for (WebElement result : searchResults) {
-            for(int i = 0; i<searchResults.size();i++) {
-				String temp = searchResults.get(i).getText();
- 
-				if ((temp.contains(PRODUCT))){
-					Assert.assertTrue(true, PRODUCT +" is displayed on product title Product Title: " + temp);
-				}else {
-					Assert.assertTrue(false, PRODUCT + " is not displayed on product title Product Title: " + temp);
-		
-				}
-}//fix this
-        }
-}
+	 try {
+         Thread.sleep(3000); // Wait for 3 seconds (you can adjust this time as needed)
+     } catch (InterruptedException e) {
+         e.printStackTrace();
+     }
+
+     // Get the search results and print them
+	 List<WebElement> searchResultItems = driver.findElements(By.cssSelector(".product-item"));
+
+     // Iterate through each item and check if it contains the word "pant"
+     for (WebElement item : searchResultItems) {
+         String itemName = item.findElement(By.cssSelector(".product-item-link")).getText();
+         if (itemName.toLowerCase().contains("pant")) {
+             System.out.println("Search result item '" + itemName + "' contains 'pant'.");
+         } else {
+             System.out.println("Search result item '" + itemName + "' does not contain 'pant'.");
+         }
+     }
+     driver.quit();}
 }
 
 

@@ -1,22 +1,20 @@
 package base;
 
-import java.io.FileReader;
-import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterTest;
 
 public class SetUp {
-	
- public static WebDriver driver;
- public static Properties prop = new Properties();
- public static FileReader fr;
 
+public WebDriver driver;
 	public void setUp() {
-		driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 	}
-
+@AfterTest
 	public void tearDown() {
 		if (driver != null) {
 			driver.quit();

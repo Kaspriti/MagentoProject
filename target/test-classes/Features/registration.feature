@@ -1,3 +1,4 @@
+@Test
 Feature: Registration Functionality Test
 
   Scenario: Create New Customer Account

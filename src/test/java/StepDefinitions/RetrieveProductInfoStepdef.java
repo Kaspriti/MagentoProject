@@ -4,35 +4,34 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
-import io.cucumber.java.en.And;
+import base.SetUp;
+
+import java.util.List;
+
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class RetrieveProductInfoStepdef {
-	WebDriver driver;
+	SetUp sp = new SetUp();
 	@When("I am on the product page of on the Magento website")
 	public void i_am_on_the_product_page_of_on_the_magento_website() {
-	    driver = new ChromeDriver();
-	    driver.manage().window().maximize();
-	    driver.get("https://magento.softwaretestingboard.com/olivia-1-4-zip-light-jacket.html");
+		sp.setUp();
+	    sp.driver.get("https://magento.softwaretestingboard.com/olivia-1-4-zip-light-jacket.html");
 	}
 
 	@Then("I should display the product information")
 	public void i_should_display_the_product_information() {
-		WebElement productNameElement = driver.findElement(By.cssSelector(".product-name span"));
-        String productName = productNameElement.getText();
-        System.out.println("Product Name: " + productName);
+        WebElement moreInfoTab = sp.driver.findElement(By.id("tab-label-description-title"));
+        Actions actions = new Actions(sp.driver);
+        actions.moveToElement(moreInfoTab).click().perform();
 
-        // Retrieve product price
-        WebElement productPriceElement = driver.findElement(By.cssSelector(".price"));
-        String productPrice = productPriceElement.getText();
-        System.out.println("Product Price: " + productPrice);
-
-        // Retrieve product description
-        WebElement productDescriptionElement = driver.findElement(By.cssSelector(".product.attribute.description"));
-        String productDescription = productDescriptionElement.getText();
-        System.out.println("Product Description: " + productDescription);
+        WebElement detailsContent = sp.driver.findElement(By.cssSelector("#additional"));
+        String content = detailsContent.getText();
+        System.out.println("More Information Content:");
+        System.out.println(content);
+        sp.driver.quit();
 	}
 //fix this
 }

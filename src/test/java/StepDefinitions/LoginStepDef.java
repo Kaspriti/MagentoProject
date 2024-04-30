@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import base.SetUp;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -16,6 +17,8 @@ import io.cucumber.java.en.When;
 
 public class LoginStepDef {
 	 WebDriver driver;
+		SetUp su = new SetUp();
+
 	@Given("I am on the login page")
 	public void i_am_on_the_login_page() {
 		driver = new ChromeDriver();
@@ -58,6 +61,6 @@ public class LoginStepDef {
 		String actualErrorMessage = errorMessage.getText();
 		String expectedErrorMessage = "The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.";
 		Assert.assertEquals(actualErrorMessage, expectedErrorMessage, "Error message is not as expected.");
-		driver.close();
+		
 	}	
 }
